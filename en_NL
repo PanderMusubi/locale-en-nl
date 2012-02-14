@@ -1,0 +1,226 @@
+escape_char /
+comment_char %
+% English language locale for the Netherlands
+%
+% Internationally oriented users who are physically located in the Netherlands
+% use software mainly in the English language. Therefore they have their systems
+% usually configured to US English International. However, due to the geographic
+% location, it can be desirable for certain data to be represented according to
+% the local Dutch notation while ther rest remains in English.
+%
+% Therefore this locale called en_NL has been created. It is based on en_US and
+% has some parts from nl_NL. Please see comments starting with "%% use" how each
+% section has been composed. Note that this specific configuration is difficult
+% to obtain by using locale nl_NL and setting LANGUAGES to en.
+%
+% Systems located in the Netherlands which are configured for the US English
+% International usually have LANG=en_US(.UTF-8) and LANGUAGE=en_US:en. Using
+% this file as en_NL /could/ trigger undesirable side effects. The following
+% quick and dirty instructions are the most failsafe to actrivate this locale:
+%   $ sudo su
+%   # cd /usr/share/i18n/locales
+%   # mv en_US en_US.org
+%   # cp en_NL en_US
+%   # locale-gen
+% Perhaps also restart your active sessions.
+
+LC_IDENTIFICATION
+title      "English locale for the Netherlands"
+source     ""
+address    ""
+contact    "Pander"
+email      "pander@users.sourceforge.net"
+tel        ""
+fax        ""
+language   "English"
+territory  "Netherlands"
+revision   "1.6"
+date       "2012-02-14"
+%
+category  "en_US:2000";LC_IDENTIFICATION
+category  "en_US:2000";LC_CTYPE
+category  "en_US:2000";LC_COLLATE
+category  "en_US:2000";LC_TIME
+category  "en_US:2000";LC_NUMERIC
+category  "en_US:2000";LC_MONETARY
+category  "en_US:2000";LC_MESSAGES
+category  "en_US:2000";LC_PAPER
+category  "en_US:2000";LC_NAME
+category  "en_US:2000";LC_ADDRESS
+category  "en_US:2000";LC_TELEPHONE
+
+END LC_IDENTIFICATION
+
+LC_CTYPE
+%% use Dutch because of local language compatability (identical to English)
+copy "i18n"
+
+translit_start
+include  "translit_combining";""
+translit_end
+END LC_CTYPE
+
+LC_COLLATE
+%% use Dutch because of local language compatability (identical to English)
+
+% Copy the template from ISO/IEC 14651
+copy "iso14651_t1"
+
+END LC_COLLATE
+
+LC_MONETARY
+%% use European because of local infrastructure
+int_curr_symbol     "<U0045><U0055><U0052><U0020>"
+currency_symbol     "<U20AC>"
+%% use English because of international language and unambiguous processing
+mon_decimal_point   "<U002E>"
+mon_thousands_sep   "<U002C>"
+mon_grouping        3;3
+positive_sign       ""
+negative_sign       "<U002D>"
+int_frac_digits     2
+frac_digits         2
+p_cs_precedes       1
+int_p_sep_by_space  1
+p_sep_by_space      0
+n_cs_precedes       1
+int_n_sep_by_space  1
+n_sep_by_space      0
+p_sign_posn         1
+n_sign_posn         1
+%
+END LC_MONETARY
+
+LC_NUMERIC
+%% use English because of international language and unambiguous processing
+decimal_point   "<U002E>"
+thousands_sep   "<U002C>"
+grouping        3;3
+END LC_NUMERIC
+
+LC_TIME
+%% use English because of international language
+abday	"<U0053><U0075><U006E>";"<U004D><U006F><U006E>";/
+	"<U0054><U0075><U0065>";"<U0057><U0065><U0064>";/
+	"<U0054><U0068><U0075>";"<U0046><U0072><U0069>";/
+	"<U0053><U0061><U0074>"
+day	"<U0053><U0075><U006E><U0064><U0061><U0079>";/
+	"<U004D><U006F><U006E><U0064><U0061><U0079>";/
+	"<U0054><U0075><U0065><U0073><U0064><U0061><U0079>";/
+	"<U0057><U0065><U0064><U006E><U0065><U0073><U0064><U0061><U0079>";/
+	"<U0054><U0068><U0075><U0072><U0073><U0064><U0061><U0079>";/
+	"<U0046><U0072><U0069><U0064><U0061><U0079>";/
+	"<U0053><U0061><U0074><U0075><U0072><U0064><U0061><U0079>"
+
+week    7;19971130;7
+%% use Dutch because of local infrastructure
+first_weekday	2
+%% use English because of international language
+first_workday	2
+abmon	"<U004A><U0061><U006E>";"<U0046><U0065><U0062>";/
+	"<U004D><U0061><U0072>";"<U0041><U0070><U0072>";/
+	"<U004D><U0061><U0079>";"<U004A><U0075><U006E>";/
+	"<U004A><U0075><U006C>";"<U0041><U0075><U0067>";/
+	"<U0053><U0065><U0070>";"<U004F><U0063><U0074>";/
+	"<U004E><U006F><U0076>";"<U0044><U0065><U0063>"
+mon	"<U004A><U0061><U006E><U0075><U0061><U0072><U0079>";/
+	"<U0046><U0065><U0062><U0072><U0075><U0061><U0072><U0079>";/
+	"<U004D><U0061><U0072><U0063><U0068>";/
+	"<U0041><U0070><U0072><U0069><U006C>";/
+	"<U004D><U0061><U0079>";/
+	"<U004A><U0075><U006E><U0065>";/
+	"<U004A><U0075><U006C><U0079>";/
+	"<U0041><U0075><U0067><U0075><U0073><U0074>";/
+	"<U0053><U0065><U0070><U0074><U0065><U006D><U0062><U0065><U0072>";/
+	"<U004F><U0063><U0074><U006F><U0062><U0065><U0072>";/
+	"<U004E><U006F><U0076><U0065><U006D><U0062><U0065><U0072>";/
+	"<U0044><U0065><U0063><U0065><U006D><U0062><U0065><U0072>"
+%% use mix of English because of international language and Dutch 24-hour clocks
+% Appropriate date and time representation (%c)
+%	"%a %d %b %Y %R %Z"
+d_t_fmt "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062><U0020><U0025><U0059><U0020><U0025><U0052><U0020><U0025><U005A>"
+%
+%% use English because of international language, this is also sortable
+% Appropriate date representation (%x)
+%	"%Y-%m-%d"
+d_fmt   "<U0025><U0059><U002D><U0025><U006D><U002D><U0025><U0064>"
+%
+%% use mix of English because of international language and Dutch 24-hour clocks
+% Appropriate time representation (%X)
+%	"%R"
+t_fmt   "<U0025><U0052>"
+%
+%% use mix of English because of international language and Dutch 24-hour clocks
+% Appropriate AM/PM time representation (%r)
+%	"%H:%M:%S"
+t_fmt_ampm "<U0025><U0048><U003A><U0025><U004D><U003A><U0025><U0053>"
+%
+%% use mix of English because of international language and Dutch 24-hour clocks
+% Strings for AM/PM
+%
+am_pm	"";""
+%
+%% use English because of international language
+% Appropriate date representation (date(1))   "%a %b %e %H:%M:%S %Z %Y"
+date_fmt	"<U0025><U0061><U0020><U0025><U0062><U0020><U0025><U0065>/
+<U0020><U0025><U0048><U003A><U0025><U004D><U003A><U0025><U0053><U0020>/
+<U0025><U005A><U0020><U0025><U0059>"
+END LC_TIME
+
+LC_MESSAGES
+%% use English because of international language
+yesexpr "<U005E><U005B><U0079><U0059><U005D><U002E><U002A>"
+noexpr  "<U005E><U005B><U006E><U004E><U005D><U002E><U002A>"
+END LC_MESSAGES
+
+LC_PAPER
+%% use Dutch because of local infrastructure
+height   297
+width    210
+END LC_PAPER
+
+LC_NAME
+%% use English because of international language
+name_fmt    "<U0025><U0064><U0025><U0074><U0025><U0067><U0025><U0074>/
+<U0025><U006D><U0025><U0074><U0025><U0066>"
+%name_gen    "" %% use this only when en_US is also providing this too
+name_miss   "<U004D><U0069><U0073><U0073><U002E>"
+name_mr     "<U004D><U0072><U002E>"
+name_mrs    "<U004D><U0072><U0073><U002E>"
+name_ms     "<U004D><U0073><U002E>"
+END LC_NAME
+
+LC_ADDRESS
+%% use Dutch because of local infrastructure
+postal_fmt    "<U0025><U0066><U0025><U004E><U0025><U0061><U0025><U004E>/
+<U0025><U0064><U0025><U004E><U0025><U0062><U0025><U004E><U0025><U0073>/
+<U0020><U0025><U0068><U0020><U0025><U0065><U0020><U0025><U0072><U0025>/
+<U004E><U0025><U007A><U0020><U0025><U0054><U0025>/
+<U004E><U0025><U0063><U0025><U004E>"
+country_name "<U004E><U0065><U0074><U0068><U0065><U0072><U006C><U0061>/
+<U006E><U0064><U0073>"
+country_post "<U004E><U004C>"
+country_ab2 "<U004E><U004C>"
+country_ab3 "<U004E><U004C><U0044>"
+country_num 528
+country_car "<U004E><U004C>"
+%% use English because of international language
+country_isbn  0
+lang_name     "<U0045><U006E><U0067><U006C><U0069><U0073><U0068>"
+lang_ab       "<U0065><U006E>"
+lang_term     "<U0065><U006E><U0067>"
+lang_lib      "<U0065><U006E><U0067>"
+END LC_ADDRESS
+
+LC_TELEPHONE
+%% use Dutch because of local infrastructure and unambiguous processing
+tel_int_fmt    "<U002B><U0025><U0063><U0025><U0061><U0025><U006C>"
+tel_dom_fmt    "<U0030><U0025><U0061><U002D><U0025><U006C>"
+int_select     "<U002B>"
+int_prefix     "<U0033><U0031>"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+%% use Dutch because of local infrastructure
+measurement    1
+END LC_MEASUREMENT
