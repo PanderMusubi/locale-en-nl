@@ -6,7 +6,7 @@ comment_char %
 % use software mainly in the English language. Therefore they have their systems
 % usually configured to US English International. However, due to the geographic
 % location, it can be desirable for certain data to be represented according to
-% the local Dutch notation while ther rest remains in English.
+% the local Dutch notation while the rest remains in English.
 %
 % Therefore this locale called en_NL has been created. It is based on en_US and
 % has some parts from nl_NL. Please see comments starting with "%% use" how each
