@@ -19,7 +19,7 @@ comment_char %
 % quick and dirty instructions are the most failsafe to actrivate this locale:
 %   $ sudo su
 %   # cd /usr/share/i18n/locales
-%   # mv en_US en_US.org
+%   # mv en_US .en_US.org
 %   # cp en_NL en_US
 %   # locale-gen
 % Perhaps also restart your active sessions.
