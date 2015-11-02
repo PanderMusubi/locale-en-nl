@@ -20,7 +20,7 @@ comment_char %
 %   $ sudo su
 %   # cd /usr/share/i18n/locales
 %   # mv en_US .en_US.org
-%   # cp en_NL en_US
+%   # cp /tmp/en_NL en_US
 %   # locale-gen
 % Perhaps also restart your active sessions.
 
@@ -34,8 +34,8 @@ tel        ""
 fax        ""
 language   "English"
 territory  "Netherlands"
-revision   "1.6"
-date       "2012-02-14"
+revision   "1.7"
+date       "2015-11-02"
 %
 category  "en_US:2000";LC_IDENTIFICATION
 category  "en_US:2000";LC_CTYPE
@@ -62,10 +62,8 @@ END LC_CTYPE
 
 LC_COLLATE
 %% use Dutch because of local language compatability (identical to English)
-
 % Copy the template from ISO/IEC 14651
 copy "iso14651_t1"
-
 END LC_COLLATE
 
 LC_MONETARY
@@ -88,7 +86,6 @@ int_n_sep_by_space  1
 n_sep_by_space      0
 p_sign_posn         1
 n_sign_posn         1
-%
 END LC_MONETARY
 
 LC_NUMERIC
@@ -111,7 +108,6 @@ day	"<U0053><U0075><U006E><U0064><U0061><U0079>";/
 	"<U0054><U0068><U0075><U0072><U0073><U0064><U0061><U0079>";/
 	"<U0046><U0072><U0069><U0064><U0061><U0079>";/
 	"<U0053><U0061><U0074><U0075><U0072><U0064><U0061><U0079>"
-
 week    7;19971130;7
 %% use Dutch because of local infrastructure
 first_weekday	2
