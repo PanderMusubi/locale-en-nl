@@ -32,6 +32,9 @@ Please, see comments starting with "%% use" in the file en_NL how each section
 has been composed. For more comprehensible comparison, see the section on
 validation below.
 
+If you support the inclusion of en\_NL in glibc, please endorse it at
+https://sourceware.org/bugzilla/show_bug.cgi?id=14085
+
 
 Installation
 ------------
