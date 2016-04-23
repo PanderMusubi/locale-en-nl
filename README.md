@@ -62,12 +62,12 @@ Sources
 * [Documentation strftime for Linux](http://man7.org/linux/man-pages/man3/strftime.3.html)
 
 
-To do
------
+To do for other locales
+-----------------------
 
-The following is still needs to be done:
-* add after the line with `name_fmt` the line `name_gen    ""` to all en\_ and nl\_ locales
-* add `mr    "dhr."`, `mrs    "mevr."`, `miss    "mevr."`, `ms    "mevr."` to nl\_ locales
+The following minor improvemens for others locales that still need to be done are:
+* add after the line with `name_fmt` the line `name_gen    ""` to all en\_US and nl\_NL locales
+* add `mr    "dhr."`, `mrs    "mevr."`, `miss    "mevr."`, `ms    "mevr."` to nl\_NL locale
 * replace `int_select` in nl\_NL locale from `""` to `"+"`
 * replace `tel_dom_fmt` in nl\_NL locale from `""` to `"0%a-%l"`
 * replace in bs\_BA `tel_int-fmt` with `tel_int_fmt`
