@@ -1,0 +1,256 @@
+---- START LC_IDENTIFICATION -----
+export LC_ALL=en_US.utf8
+en_US.utf8: title="English locale for the USA"
+source="Free Software Foundation, Inc."
+address="http://www.gnu.org/software/libc/"
+contact=""
+email="bug-glibc-locales@gnu.org"
+tel=""
+fax=""
+language="English"
+territory="USA"
+audience=""
+application=""
+abbreviation=""
+revision="1.0"
+date="2000-06-24"
+category="en_US:2000;UTF-8;;;;;;;;;;;"
+identification-codeset="UTF-8"
+----- END LC_IDENTIFICATION -----
+---- START LC_CTYPE -----
+export LC_ALL=en_US.utf8
+en_US.utf8: ctype-class-names="upper";"lower";"alpha";"digit";"xdigit";"space";"print";"graph";"blank";"cntrl";"punct";"alnum";"combining";"combining_level3"
+ctype-map-names="toupper";"tolower";"totitle"
+ctype-width=16
+ctype-mb-cur-max=6
+charmap="UTF-8"
+ctype-class-offset=72
+ctype-map-offset=86
+ctype-indigits_mb-len=1
+ctype-indigits0_mb="0"
+ctype-indigits1_mb="1"
+ctype-indigits2_mb="2"
+ctype-indigits3_mb="3"
+ctype-indigits4_mb="4"
+ctype-indigits5_mb="5"
+ctype-indigits6_mb="6"
+ctype-indigits7_mb="7"
+ctype-indigits8_mb="8"
+ctype-indigits9_mb="9"
+ctype-indigits_wc-len=1
+ctype-outdigit0_mb="0"
+ctype-outdigit1_mb="1"
+ctype-outdigit2_mb="2"
+ctype-outdigit3_mb="3"
+ctype-outdigit4_mb="4"
+ctype-outdigit5_mb="5"
+ctype-outdigit6_mb="6"
+ctype-outdigit7_mb="7"
+ctype-outdigit8_mb="8"
+ctype-outdigit9_mb="9"
+ctype-outdigit0_wc=48
+ctype-outdigit1_wc=49
+ctype-outdigit2_wc=50
+ctype-outdigit3_wc=51
+ctype-outdigit4_wc=52
+ctype-outdigit5_wc=53
+ctype-outdigit6_wc=54
+ctype-outdigit7_wc=55
+ctype-outdigit8_wc=56
+ctype-outdigit9_wc=57
+ctype-translit-tab-size=5723
+ctype-translit-default-missing-len=1
+ctype-translit-ignore-len=0
+ctype-translit-ignore=""
+map-to-nonascii=0
+nonascii-case=0
+----- END LC_CTYPE -----
+---- START LC_COLLATE -----
+export LC_ALL=en_US.utf8
+en_US.utf8: collate-nrules=4
+collate-rulesets=""
+collate-symb-hash-sizemb=2707
+collate-codeset="UTF-8"
+----- END LC_COLLATE -----
+---- START LC_MONETARY -----
+export LC_ALL=en_US.utf8
+en_US.utf8: int_curr_symbol="USD "
+currency_symbol="$"
+mon_decimal_point="."
+mon_thousands_sep=","
+mon_grouping=3;3
+positive_sign=""
+negative_sign="-"
+int_frac_digits=2
+frac_digits=2
+p_cs_precedes=1
+p_sep_by_space=0
+n_cs_precedes=1
+n_sep_by_space=0
+p_sign_posn=1
+n_sign_posn=1
+crncystr="-$"
+int_p_cs_precedes=1
+int_p_sep_by_space=1
+int_n_cs_precedes=1
+int_n_sep_by_space=1
+int_p_sign_posn=1
+int_n_sign_posn=1
+duo_int_curr_symbol="USD "
+duo_currency_symbol="$"
+duo_int_frac_digits=2
+duo_frac_digits=2
+duo_p_cs_precedes=1
+duo_p_sep_by_space=0
+duo_n_cs_precedes=1
+duo_n_sep_by_space=0
+duo_int_p_cs_precedes=1
+duo_int_p_sep_by_space=1
+duo_int_n_cs_precedes=1
+duo_int_n_sep_by_space=1
+duo_p_sign_posn=1
+duo_n_sign_posn=1
+duo_int_p_sign_posn=1
+duo_int_n_sign_posn=1
+uno_valid_from=10101
+uno_valid_to=99991231
+duo_valid_from=10101
+duo_valid_to=99991231
+conversion_rate=1;1
+monetary-decimal-point-wc=46
+monetary-thousands-sep-wc=44
+monetary-codeset="UTF-8"
+----- END LC_MONETARY -----
+---- START LC_NUMERIC -----
+export LC_ALL=en_US.utf8
+en_US.utf8: decimal_point="."
+thousands_sep=","
+grouping=3;3
+numeric-decimal-point-wc=46
+numeric-thousands-sep-wc=44
+numeric-codeset="UTF-8"
+----- END LC_NUMERIC -----
+---- START LC_TIME -----
+export LC_ALL=en_US.utf8
+en_US.utf8: abday="Sun;Mon;Tue;Wed;Thu;Fri;Sat"
+day="Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday"
+abmon="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec"
+mon="January;February;March;April;May;June;July;August;September;October;November;December"
+am_pm="AM;PM"
+d_t_fmt="%a %d %b %Y %r %Z"
+d_fmt="%m/%d/%Y"
+t_fmt="%r"
+t_fmt_ampm="%I:%M:%S %p"
+era=
+era_year=""
+era_d_fmt=""
+alt_digits=
+era_d_t_fmt=""
+era_t_fmt=""
+time-era-num-entries=0
+time-era-entries="S"
+week-ndays=7
+week-1stday=19971130
+week-1stweek=7
+first_weekday=1
+first_workday=2
+cal_direction=1
+timezone=""
+date_fmt="%a %b %e %H:%M:%S %Z %Y"
+time-codeset="UTF-8"
+----- END LC_TIME -----
+---- START LC_MESSAGES -----
+export LC_ALL=en_US.utf8
+en_US.utf8: yesexpr="^[yY].*"
+noexpr="^[nN].*"
+yesstr="Yes"
+nostr="No"
+messages-codeset="UTF-8"
+----- END LC_MESSAGES -----
+---- START LC_PAPER -----
+export LC_ALL=en_US.utf8
+en_US.utf8: height=279
+width=216
+paper-codeset="UTF-8"
+----- END LC_PAPER -----
+---- START LC_TELEPHONE -----
+export LC_ALL=en_US.utf8
+en_US.utf8: tel_int_fmt="+%c (%a) %l"
+tel_dom_fmt="(%a) %l"
+int_select="11"
+int_prefix="1"
+telephone-codeset="UTF-8"
+----- END LC_TELEPHONE -----
+---- START LC_MEASUREMENT -----
+export LC_ALL=en_US.utf8
+en_US.utf8: measurement=2
+measurement-codeset="UTF-8"
+----- END LC_MEASUREMENT -----
+---- START LC_NAME -----
+export LC_ALL=en_US.utf8
+en_US.utf8: name_fmt="%d%t%g%t%m%t%f"
+name_gen=""
+name_mr="Mr."
+name_mrs="Mrs."
+name_miss="Miss."
+name_ms="Ms."
+name-codeset="UTF-8"
+----- END LC_NAME -----
+---- START LC_ADDRESS -----
+export LC_ALL=en_US.utf8
+en_US.utf8: postal_fmt="%a%N%f%N%d%N%b%N%h %s %e %r%N%T, %S %z%N%c%N"
+country_name="USA"
+country_post="USA"
+country_ab2="US"
+country_ab3="USA"
+country_car="USA"
+country_num=840
+country_isbn="0"
+lang_name="English"
+lang_ab="en"
+lang_term="eng"
+lang_lib="eng"
+address-codeset="UTF-8"
+----- END LC_ADDRESS -----
+Using locale: LC_TIME="en_US.utf8"
+
+Locale definitions at time 'now'
+d_t_fmt (%c): Sat 23 Apr 2016 08:20:21 PM CEST
+d_fmt (%x): 04/23/2016
+t_fmt (%X): 08:20:21 PM
+AM_PM (%p): PM
+am_pm (%P): pm
+t_fmt_ampm (%r): 08:20:21 PM
+date_fmt: Sat Apr 23 20:20:21 CEST 2016
+abday (%a) Sat
+day (%A) Saturday
+abmon (%b) Apr
+mon (%B) April
+
+Days of the week (long - abbreviated)
+Sunday - Sun
+Monday - Mon
+Tuesday - Tue
+Wednesday - Wed
+Thursday - Thu
+Friday - Fri
+Saturday - Sat
+
+Months of the year (long - abbreviated)
+January - Jan
+February - Feb
+March - Mar
+April - Apr
+May - May
+June - Jun
+July - Jul
+August - Aug
+September - Sep
+October - Oct
+November - Nov
+December - Dec
+
+Using locale: LC_NUMERIC="en_US.utf8"
+Thousand seperator: 2,000,000
+Fractions: 2.00
+Fractions with thousands: 2,000.00
