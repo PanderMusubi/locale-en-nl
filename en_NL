@@ -2,31 +2,34 @@ escape_char /
 comment_char %
 % English language locale for the Netherlands
 %
-% Internationally oriented users who are physically located in the Netherlands
-% use software mainly in the English language. Therefore they have their systems
-% usually configured to US English International. However, due to the geographic
-% location, it can be desirable for certain data to be represented according to
-% the local Dutch notation while the rest remains in English.
+% Many users who are physically located in the Netherlands use software in the
+% American English language. Most of them are native Dutch speakers working in
+% IT, but this also applies for non-Dutch expats in the Netherlands. For their
+% work they usually have their systems configured to US English International.
+% However, due to the geographic location or territory, it can be highly
+% desirable for certain data to be represented according to the local Dutch
+% notation, while the rest remains in English.
 %
-% Therefore this locale called en_NL has been created. It is based on en_US and
-% has some parts from nl_NL. Please see comments starting with "%% use" how each
-% section has been composed. Note that this specific configuration is difficult
-% to obtain by using locale nl_NL and setting LANGUAGES to en.
+% It is possible to configure a system by setting a mix of LC sections of
+% different locales. For example the LC_MONETARY of en_US and LC_TIME of
+% nl_NL. However, it is not possible to mix on section level only to get a
+% proper locale with English language in the Netherlands territory. This
+%  requires a custom locale to correctly set fields in the sections LC_MONETARY,
+% LC_TIME and LC_ADDRESS.
 %
-% Systems located in the Netherlands which are configured for the US English
-% International usually have LANG=en_US(.UTF-8) and LANGUAGE=en_US:en. Using
-% this file as en_NL /could/ trigger undesirable side effects. The following
-% quick and dirty instructions are the most failsafe to actrivate this locale:
-%   $ sudo su
-%   # cd /usr/share/i18n/locales
-%   # mv en_US .en_US.org
-%   # cp /tmp/en_NL en_US
-%   # locale-gen
-% Perhaps also restart your active sessions.
-
+% For this reason the locale called en_NL has been created. It is based on the
+% locale en_US and has some carefully mixed parts from nl_NL. Note that this
+% specific configuration is impossible to obtain by using locale nl_NL and
+% setting LANGUAGES to en or other mixed LC section usage. This justifies an
+% en_NL locace and having it supported by glibc.
+%
+% Please, see comments starting with "%% use" below how each section has been
+% composed. For more comprehensible comparison, see the section on validation
+% at https://github.com/PanderMusubi/locale-en-nl
+%
 LC_IDENTIFICATION
 title      "English locale for the Netherlands"
-source     ""
+source     "https://github.com/PanderMusubi/locale-en-nl"
 address    ""
 contact    "Pander"
 email      "pander@users.sourceforge.net"
@@ -34,8 +37,8 @@ tel        ""
 fax        ""
 language   "English"
 territory  "Netherlands"
-revision   "1.7"
-date       "2015-11-02"
+revision   "1.8"
+date       "2016-04-23"
 %
 category  "en_US:2000";LC_IDENTIFICATION
 category  "en_US:2000";LC_CTYPE
@@ -131,27 +134,27 @@ mon	"<U004A><U0061><U006E><U0075><U0061><U0072><U0079>";/
 	"<U004F><U0063><U0074><U006F><U0062><U0065><U0072>";/
 	"<U004E><U006F><U0076><U0065><U006D><U0062><U0065><U0072>";/
 	"<U0044><U0065><U0063><U0065><U006D><U0062><U0065><U0072>"
-%% use mix of English because of international language and Dutch 24-hour clocks
+%% use Dutch because of 24-hour clocks
 % Appropriate date and time representation (%c)
-%	"%a %d %b %Y %R %Z"
-d_t_fmt "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062><U0020><U0025><U0059><U0020><U0025><U0052><U0020><U0025><U005A>"
+%	"%a %d %b %Y %T %Z"
+d_t_fmt "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062><U0020><U0025><U0059><U0020><U0025><U0054><U0020><U0025><U005A>"
 %
-%% use English because of international language, this is also sortable
+%% use unambiguous full date to prevent mistakes and make it sortable too
 % Appropriate date representation (%x)
 %	"%Y-%m-%d"
 d_fmt   "<U0025><U0059><U002D><U0025><U006D><U002D><U0025><U0064>"
 %
-%% use mix of English because of international language and Dutch 24-hour clocks
+%% use Dutch because of 24-hour clocks
 % Appropriate time representation (%X)
-%	"%R"
-t_fmt   "<U0025><U0052>"
+%	"%T"
+t_fmt   "<U0025><U0054>"
 %
 %% use mix of English because of international language and Dutch 24-hour clocks
 % Appropriate AM/PM time representation (%r)
 %	"%H:%M:%S"
 t_fmt_ampm "<U0025><U0048><U003A><U0025><U004D><U003A><U0025><U0053>"
 %
-%% use mix of English because of international language and Dutch 24-hour clocks
+%% use Dutch because of 24-hour clocks
 % Strings for AM/PM
 %
 am_pm	"";""
@@ -179,7 +182,7 @@ LC_NAME
 %% use English because of international language
 name_fmt    "<U0025><U0064><U0025><U0074><U0025><U0067><U0025><U0074>/
 <U0025><U006D><U0025><U0074><U0025><U0066>"
-%name_gen    "" %% use this only when en_US is also providing this too
+name_gen    ""
 name_miss   "<U004D><U0069><U0073><U0073><U002E>"
 name_mr     "<U004D><U0072><U002E>"
 name_mrs    "<U004D><U0072><U0073><U002E>"

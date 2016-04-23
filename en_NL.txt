@@ -1,7 +1,7 @@
 ---- START LC_IDENTIFICATION -----
 export LC_ALL=en_NL.utf8
 en_NL.utf8: title="English locale for the Netherlands"
-source=""
+source="https:/github.comPanderMusubilocale-en-nl"
 address=""
 contact="Pander"
 email="pander@users.sourceforge.net"
@@ -215,13 +215,13 @@ address-codeset="UTF-8"
 Using locale: LC_TIME="en_NL.utf8"
 
 Locale definitions at time 'now'
-d_t_fmt (%c): Sat 23 Apr 2016 20:20:21 CEST
+d_t_fmt (%c): Sat 23 Apr 2016 21:29:55 CEST
 d_fmt (%x): 2016-04-23
-t_fmt (%X): 20:20:21
+t_fmt (%X): 21:29:55
 AM_PM (%p): 
 am_pm (%P): 
-t_fmt_ampm (%r): 20:20:21
-date_fmt: Sat Apr 23 20:20:21 CEST 2016
+t_fmt_ampm (%r): 21:29:55
+date_fmt: Sat Apr 23 21:29:55 CEST 2016
 abday (%a) Sat
 day (%A) Saturday
 abmon (%b) Apr

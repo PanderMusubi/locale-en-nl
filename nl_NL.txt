@@ -215,13 +215,13 @@ address-codeset="UTF-8"
 Using locale: LC_TIME="nl_NL.utf8"
 
 Locale definitions at time 'now'
-d_t_fmt (%c): za 23 apr 2016 20:20:21 CEST
+d_t_fmt (%c): za 23 apr 2016 21:29:55 CEST
 d_fmt (%x): 23-04-16
-t_fmt (%X): 20:20:21
+t_fmt (%X): 21:29:55
 AM_PM (%p): 
 am_pm (%P): 
-t_fmt_ampm (%r): 08:20:21 
-date_fmt: za 23 apr 2016 20:20:21 CEST
+t_fmt_ampm (%r): 09:29:55 
+date_fmt: za 23 apr 2016 21:29:55 CEST
 abday (%a) za
 day (%A) zaterdag
 abmon (%b) apr

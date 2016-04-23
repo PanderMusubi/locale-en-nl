@@ -215,13 +215,13 @@ address-codeset="UTF-8"
 Using locale: LC_TIME="en_US.utf8"
 
 Locale definitions at time 'now'
-d_t_fmt (%c): Sat 23 Apr 2016 08:20:21 PM CEST
+d_t_fmt (%c): Sat 23 Apr 2016 09:29:55 PM CEST
 d_fmt (%x): 04/23/2016
-t_fmt (%X): 08:20:21 PM
+t_fmt (%X): 09:29:55 PM
 AM_PM (%p): PM
 am_pm (%P): pm
-t_fmt_ampm (%r): 08:20:21 PM
-date_fmt: Sat Apr 23 20:20:21 CEST 2016
+t_fmt_ampm (%r): 09:29:55 PM
+date_fmt: Sat Apr 23 21:29:55 CEST 2016
 abday (%a) Sat
 day (%A) Saturday
 abmon (%b) Apr
