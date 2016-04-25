@@ -46,10 +46,12 @@ script manually.
 Validation
 ----------
 
-Examine the generated TXT-files with `fldiff en_NL.txt nl_NL.txt` and
-`fldiff en_NL.txt en_US.txt`
+Examine the generated TXT-files with `fldiff nl_NL.txt en_NL.txt` and
+`fldiff en_US.txt en_NL.txt` In the directory [comparison](comparison) are
+screenshots of these colored diffs.
 
-These files have been generated with the `./validate.sh` script after installation.
+These files have been generated with the `./validate.sh` script after
+installation.
 
 
 Sources
