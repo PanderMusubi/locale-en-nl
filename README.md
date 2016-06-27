@@ -9,11 +9,11 @@ Introduction
 
 Many users who are physically located in the Netherlands use software in the
 American English language. Most of them are native Dutch speakers working in IT,
-but this also applies for non-Dutch expats in the Netherlands. For their work
+but this also applies for non-Dutch expats in the Netherlands. In their work
 they usually have their systems configured to US English International. However,
-due to the geographic location or territory, it can be highly desirable for
-certain data to be represented according to the local Dutch notation, while the
-rest remains in English.
+due to the geographic location or territory they reside in, it can be highly
+desirable for certain data to be represented according to the local Dutch
+notation, while the rest remains in English.
 
 It is possible to configure a system by setting a mix of LC sections of
 different locales. For example the LC\_MONETARY of en\_US and LC\_TIME of
