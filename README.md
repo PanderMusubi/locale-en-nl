@@ -17,10 +17,10 @@ notation, while the rest remains in English.
 
 It is possible to configure a system by setting a mix of LC sections of
 different locales. For example the LC\_MONETARY of en\_US and LC\_TIME of
-nl\_NL. However, it is not possible to mix on section level only to get a proper
-locale with English language in the Netherlands territory. This requires a
-custom locale to correctly set fields in the sections LC\_MONETARY, LC\_TIME and
-LC\_ADDRESS.
+nl\_NL. Nevertheless, it is not possible to mix on section level only to get a
+proper locale with English language in the Netherlands territory. This requires
+a custom locale to correctly set fields in the sections LC\_MONETARY, LC\_TIME
+and LC\_ADDRESS.
 
 For this reason the locale called en\_NL has been created. It is based on the
 locale en\_US and has some carefully mixed parts from nl\_NL. Note that this

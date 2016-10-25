@@ -37,20 +37,20 @@ tel        ""
 fax        ""
 language   "English"
 territory  "Netherlands"
-revision   "1.8"
-date       "2016-04-23"
+revision   "1.9"
+date       "2016-10-25"
 %
-category  "en_US:2000";LC_IDENTIFICATION
-category  "en_US:2000";LC_CTYPE
-category  "en_US:2000";LC_COLLATE
-category  "en_US:2000";LC_TIME
-category  "en_US:2000";LC_NUMERIC
-category  "en_US:2000";LC_MONETARY
-category  "en_US:2000";LC_MESSAGES
-category  "en_US:2000";LC_PAPER
-category  "en_US:2000";LC_NAME
-category  "en_US:2000";LC_ADDRESS
-category  "en_US:2000";LC_TELEPHONE
+category  "i18n:2012";LC_IDENTIFICATION
+category  "i18n:2012";LC_CTYPE
+category  "i18n:2012";LC_COLLATE
+category  "i18n:2012";LC_TIME
+category  "i18n:2012";LC_NUMERIC
+category  "i18n:2012";LC_MONETARY
+category  "i18n:2012";LC_MESSAGES
+category  "i18n:2012";LC_PAPER
+category  "i18n:2012";LC_NAME
+category  "i18n:2012";LC_ADDRESS
+category  "i18n:2012";LC_TELEPHONE
 
 END LC_IDENTIFICATION
 

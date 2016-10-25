@@ -58,7 +58,7 @@ ctype-outdigit6_wc=54
 ctype-outdigit7_wc=55
 ctype-outdigit8_wc=56
 ctype-outdigit9_wc=57
-ctype-translit-tab-size=5723
+ctype-translit-tab-size=5728
 ctype-translit-default-missing-len=1
 ctype-translit-ignore-len=0
 ctype-translit-ignore=""
@@ -215,17 +215,17 @@ address-codeset="UTF-8"
 Using locale: LC_TIME="en_NL.utf8"
 
 Locale definitions at time 'now'
-d_t_fmt (%c): Sat 23 Apr 2016 21:29:55 CEST
-d_fmt (%x): 2016-04-23
-t_fmt (%X): 21:29:55
+d_t_fmt (%c): Tue 25 Oct 2016 15:01:43 CEST
+d_fmt (%x): 2016-10-25
+t_fmt (%X): 15:01:43
 AM_PM (%p): 
 am_pm (%P): 
-t_fmt_ampm (%r): 21:29:55
-date_fmt: Sat Apr 23 21:29:55 CEST 2016
-abday (%a) Sat
-day (%A) Saturday
-abmon (%b) Apr
-mon (%B) April
+t_fmt_ampm (%r): 15:01:43
+date_fmt: Tue Oct 25 15:01:43 CEST 2016
+abday (%a) Tue
+day (%A) Tuesday
+abmon (%b) Oct
+mon (%B) October
 
 Days of the week (long - abbreviated)
 Sunday - Sun

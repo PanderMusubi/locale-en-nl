@@ -7,14 +7,14 @@ contact=""
 email="bug-glibc-locales@gnu.org"
 tel=""
 fax=""
-language="English"
-territory="USA"
+language="American English"
+territory="United States"
 audience=""
 application=""
 abbreviation=""
 revision="1.0"
 date="2000-06-24"
-category="en_US:2000;UTF-8;;;;;;;;;;;"
+category="i18n:2012;UTF-8;;;;;;;;;;;"
 identification-codeset="UTF-8"
 ----- END LC_IDENTIFICATION -----
 ---- START LC_CTYPE -----
@@ -58,7 +58,7 @@ ctype-outdigit6_wc=54
 ctype-outdigit7_wc=55
 ctype-outdigit8_wc=56
 ctype-outdigit9_wc=57
-ctype-translit-tab-size=5723
+ctype-translit-tab-size=5728
 ctype-translit-default-missing-len=1
 ctype-translit-ignore-len=0
 ctype-translit-ignore=""
@@ -151,7 +151,7 @@ time-era-num-entries=0
 time-era-entries="S"
 week-ndays=7
 week-1stday=19971130
-week-1stweek=7
+week-1stweek=1
 first_weekday=1
 first_workday=2
 cal_direction=1
@@ -161,10 +161,10 @@ time-codeset="UTF-8"
 ----- END LC_TIME -----
 ---- START LC_MESSAGES -----
 export LC_ALL=en_US.utf8
-en_US.utf8: yesexpr="^[yY].*"
-noexpr="^[nN].*"
-yesstr="Yes"
-nostr="No"
+en_US.utf8: yesexpr="^[+1yY]"
+noexpr="^[-0nN]"
+yesstr="yes"
+nostr="no"
 messages-codeset="UTF-8"
 ----- END LC_MESSAGES -----
 ---- START LC_PAPER -----
@@ -199,7 +199,7 @@ name-codeset="UTF-8"
 ---- START LC_ADDRESS -----
 export LC_ALL=en_US.utf8
 en_US.utf8: postal_fmt="%a%N%f%N%d%N%b%N%h %s %e %r%N%T, %S %z%N%c%N"
-country_name="USA"
+country_name="United States"
 country_post="USA"
 country_ab2="US"
 country_ab3="USA"
@@ -215,17 +215,17 @@ address-codeset="UTF-8"
 Using locale: LC_TIME="en_US.utf8"
 
 Locale definitions at time 'now'
-d_t_fmt (%c): Sat 23 Apr 2016 09:29:55 PM CEST
-d_fmt (%x): 04/23/2016
-t_fmt (%X): 09:29:55 PM
+d_t_fmt (%c): Tue 25 Oct 2016 03:01:43 PM CEST
+d_fmt (%x): 10/25/2016
+t_fmt (%X): 03:01:43 PM
 AM_PM (%p): PM
 am_pm (%P): pm
-t_fmt_ampm (%r): 09:29:55 PM
-date_fmt: Sat Apr 23 21:29:55 CEST 2016
-abday (%a) Sat
-day (%A) Saturday
-abmon (%b) Apr
-mon (%B) April
+t_fmt_ampm (%r): 03:01:43 PM
+date_fmt: Tue Oct 25 15:01:43 CEST 2016
+abday (%a) Tue
+day (%A) Tuesday
+abmon (%b) Oct
+mon (%B) October
 
 Days of the week (long - abbreviated)
 Sunday - Sun

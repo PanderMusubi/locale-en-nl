@@ -14,7 +14,7 @@ application=""
 abbreviation=""
 revision="1.0"
 date="2000-06-29"
-category="nl_NL:2000;UTF-8;;;;;;;;;;;"
+category="i18n:2012;UTF-8;;;;;;;;;;;"
 identification-codeset="UTF-8"
 ----- END LC_IDENTIFICATION -----
 ---- START LC_CTYPE -----
@@ -58,7 +58,7 @@ ctype-outdigit6_wc=54
 ctype-outdigit7_wc=55
 ctype-outdigit8_wc=56
 ctype-outdigit9_wc=57
-ctype-translit-tab-size=5723
+ctype-translit-tab-size=5728
 ctype-translit-default-missing-len=1
 ctype-translit-ignore-len=0
 ctype-translit-ignore=""
@@ -161,10 +161,10 @@ time-codeset="UTF-8"
 ----- END LC_TIME -----
 ---- START LC_MESSAGES -----
 export LC_ALL=nl_NL.utf8
-nl_NL.utf8: yesexpr="^[jJyY].*"
-noexpr="^[nN].*"
-yesstr=""
-nostr=""
+nl_NL.utf8: yesexpr="^[+1jJyY]"
+noexpr="^[-0nN]"
+yesstr="ja"
+nostr="nee"
 messages-codeset="UTF-8"
 ----- END LC_MESSAGES -----
 ---- START LC_PAPER -----
@@ -199,7 +199,7 @@ name-codeset="UTF-8"
 ---- START LC_ADDRESS -----
 export LC_ALL=nl_NL.utf8
 nl_NL.utf8: postal_fmt="%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
-country_name=""
+country_name="Nederland"
 country_post=""
 country_ab2="NL"
 country_ab3="NLD"
@@ -215,17 +215,17 @@ address-codeset="UTF-8"
 Using locale: LC_TIME="nl_NL.utf8"
 
 Locale definitions at time 'now'
-d_t_fmt (%c): za 23 apr 2016 21:29:55 CEST
-d_fmt (%x): 23-04-16
-t_fmt (%X): 21:29:55
+d_t_fmt (%c): di 25 okt 2016 15:01:43 CEST
+d_fmt (%x): 25-10-16
+t_fmt (%X): 15:01:43
 AM_PM (%p): 
 am_pm (%P): 
-t_fmt_ampm (%r): 09:29:55 
-date_fmt: za 23 apr 2016 21:29:55 CEST
-abday (%a) za
-day (%A) zaterdag
-abmon (%b) apr
-mon (%B) april
+t_fmt_ampm (%r): 03:01:43 
+date_fmt: di 25 okt 2016 15:01:43 CEST
+abday (%a) di
+day (%A) dinsdag
+abmon (%b) okt
+mon (%B) oktober
 
 Days of the week (long - abbreviated)
 zondag - zo
