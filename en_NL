@@ -1,56 +1,36 @@
 escape_char /
 comment_char %
-% English language locale for the Netherlands
-%
-% Many users who are physically located in the Netherlands use software in the
-% American English language. Most of them are native Dutch speakers working in
-% IT, but this also applies for non-Dutch expats in the Netherlands. For their
-% work they usually have their systems configured to US English International.
-% However, due to the geographic location or territory, it can be highly
-% desirable for certain data to be represented according to the local Dutch
-% notation, while the rest remains in English.
-%
-% It is possible to configure a system by setting a mix of LC sections of
-% different locales. For example the LC_MONETARY of en_US and LC_TIME of
-% nl_NL. However, it is not possible to mix on section level only to get a
-% proper locale with English language in the Netherlands territory. This
-%  requires a custom locale to correctly set fields in the sections LC_MONETARY,
-% LC_TIME and LC_ADDRESS.
-%
-% For this reason the locale called en_NL has been created. It is based on the
-% locale en_US and has some carefully mixed parts from nl_NL. Note that this
-% specific configuration is impossible to obtain by using locale nl_NL and
-% setting LANGUAGES to en or other mixed LC section usage. This justifies an
-% en_NL locace and having it supported by glibc.
-%
-% Please, see comments starting with "%% use" below how each section has been
-% composed. For more comprehensible comparison, see the section on validation
-% at https://github.com/PanderMusubi/locale-en-nl
-%
+
+% This file is part of the GNU C Library and contains locale data.
+% The Free Software Foundation does not claim any copyright interest
+% in the locale data contained in this file.  The foregoing does not
+% affect the license of the GNU C Library as a whole.  It does not
+% exempt you from the conditions of the license if your use would
+% otherwise be governed by that license.
+
+% See for documentation https://github.com/PanderMusubi/locale-en-nl
+
 LC_IDENTIFICATION
-title      "English locale for the Netherlands"
-source     "https://github.com/PanderMusubi/locale-en-nl"
-address    ""
-contact    "Pander"
-email      "pander@users.sourceforge.net"
-tel        ""
-fax        ""
-language   "English"
-territory  "Netherlands"
-revision   "2.0"
-date       "2016-10-25"
-%
-category  "i18n:2012";LC_IDENTIFICATION
-category  "i18n:2012";LC_CTYPE
-category  "i18n:2012";LC_COLLATE
-category  "i18n:2012";LC_TIME
-category  "i18n:2012";LC_NUMERIC
-category  "i18n:2012";LC_MONETARY
-category  "i18n:2012";LC_MESSAGES
-category  "i18n:2012";LC_PAPER
-category  "i18n:2012";LC_NAME
-category  "i18n:2012";LC_ADDRESS
-category  "i18n:2012";LC_TELEPHONE
+title       "English locale for the Netherlands"
+source      "https://github.com/PanderMusubi/locale-en-nl"
+contact     "Pander"
+email       "pander@users.sourceforge.net"
+language    "English"
+territory   "Netherlands"
+revision    "2.1"
+date        "2016-11-20"
+
+category    "i18n:2012";LC_IDENTIFICATION
+category    "i18n:2012";LC_CTYPE
+category    "i18n:2012";LC_COLLATE
+category    "i18n:2012";LC_TIME
+category    "i18n:2012";LC_NUMERIC
+category    "i18n:2012";LC_MONETARY
+category    "i18n:2012";LC_MESSAGES
+category    "i18n:2012";LC_PAPER
+category    "i18n:2012";LC_NAME
+category    "i18n:2012";LC_ADDRESS
+category    "i18n:2012";LC_TELEPHONE
 
 END LC_IDENTIFICATION
 
@@ -63,9 +43,25 @@ copy "en_US"
 END LC_COLLATE
 
 LC_MONETARY
-copy "en_US"
+% from nl_NL
 int_curr_symbol     "<U0045><U0055><U0052><U0020>"
 currency_symbol     "<U20AC>"
+% from en_US
+mon_decimal_point   "<U002E>"
+mon_thousands_sep   "<U002C>"
+mon_grouping        3;3
+positive_sign       ""
+negative_sign       "<U002D>"
+int_frac_digits     2
+frac_digits         2
+p_cs_precedes       1
+int_p_sep_by_space  1
+p_sep_by_space      0
+n_cs_precedes       1
+int_n_sep_by_space  1
+n_sep_by_space      0
+p_sign_posn         1
+n_sign_posn         1
 END LC_MONETARY
 
 LC_NUMERIC
@@ -73,36 +69,49 @@ copy "en_US"
 END LC_NUMERIC
 
 LC_TIME
-copy "nl_NL"
-abday	"<U0053><U0075><U006E>";"<U004D><U006F><U006E>";/
-	"<U0054><U0075><U0065>";"<U0057><U0065><U0064>";/
-	"<U0054><U0068><U0075>";"<U0046><U0072><U0069>";/
-	"<U0053><U0061><U0074>"
-day	"<U0053><U0075><U006E><U0064><U0061><U0079>";/
-	"<U004D><U006F><U006E><U0064><U0061><U0079>";/
-	"<U0054><U0075><U0065><U0073><U0064><U0061><U0079>";/
-	"<U0057><U0065><U0064><U006E><U0065><U0073><U0064><U0061><U0079>";/
-	"<U0054><U0068><U0075><U0072><U0073><U0064><U0061><U0079>";/
-	"<U0046><U0072><U0069><U0064><U0061><U0079>";/
-	"<U0053><U0061><U0074><U0075><U0072><U0064><U0061><U0079>"
-abmon	"<U004A><U0061><U006E>";"<U0046><U0065><U0062>";/
-	"<U004D><U0061><U0072>";"<U0041><U0070><U0072>";/
-	"<U004D><U0061><U0079>";"<U004A><U0075><U006E>";/
-	"<U004A><U0075><U006C>";"<U0041><U0075><U0067>";/
-	"<U0053><U0065><U0070>";"<U004F><U0063><U0074>";/
-	"<U004E><U006F><U0076>";"<U0044><U0065><U0063>"
-mon	"<U004A><U0061><U006E><U0075><U0061><U0072><U0079>";/
-	"<U0046><U0065><U0062><U0072><U0075><U0061><U0072><U0079>";/
-	"<U004D><U0061><U0072><U0063><U0068>";/
-	"<U0041><U0070><U0072><U0069><U006C>";/
-	"<U004D><U0061><U0079>";/
-	"<U004A><U0075><U006E><U0065>";/
-	"<U004A><U0075><U006C><U0079>";/
-	"<U0041><U0075><U0067><U0075><U0073><U0074>";/
-	"<U0053><U0065><U0070><U0074><U0065><U006D><U0062><U0065><U0072>";/
-	"<U004F><U0063><U0074><U006F><U0062><U0065><U0072>";/
-	"<U004E><U006F><U0076><U0065><U006D><U0062><U0065><U0072>";/
-	"<U0044><U0065><U0063><U0065><U006D><U0062><U0065><U0072>"
+% from en_US
+abday   "<U0053><U0075><U006E>";"<U004D><U006F><U006E>";/
+        "<U0054><U0075><U0065>";"<U0057><U0065><U0064>";/
+        "<U0054><U0068><U0075>";"<U0046><U0072><U0069>";/
+        "<U0053><U0061><U0074>"
+day     "<U0053><U0075><U006E><U0064><U0061><U0079>";/
+        "<U004D><U006F><U006E><U0064><U0061><U0079>";/
+        "<U0054><U0075><U0065><U0073><U0064><U0061><U0079>";/
+        "<U0057><U0065><U0064><U006E><U0065><U0073><U0064><U0061><U0079>";/
+        "<U0054><U0068><U0075><U0072><U0073><U0064><U0061><U0079>";/
+        "<U0046><U0072><U0069><U0064><U0061><U0079>";/
+        "<U0053><U0061><U0074><U0075><U0072><U0064><U0061><U0079>"
+abmon   "<U004A><U0061><U006E>";"<U0046><U0065><U0062>";/
+        "<U004D><U0061><U0072>";"<U0041><U0070><U0072>";/
+        "<U004D><U0061><U0079>";"<U004A><U0075><U006E>";/
+        "<U004A><U0075><U006C>";"<U0041><U0075><U0067>";/
+        "<U0053><U0065><U0070>";"<U004F><U0063><U0074>";/
+        "<U004E><U006F><U0076>";"<U0044><U0065><U0063>"
+mon     "<U004A><U0061><U006E><U0075><U0061><U0072><U0079>";/
+        "<U0046><U0065><U0062><U0072><U0075><U0061><U0072><U0079>";/
+        "<U004D><U0061><U0072><U0063><U0068>";/
+        "<U0041><U0070><U0072><U0069><U006C>";/
+        "<U004D><U0061><U0079>";/
+        "<U004A><U0075><U006E><U0065>";/
+        "<U004A><U0075><U006C><U0079>";/
+        "<U0041><U0075><U0067><U0075><U0073><U0074>";/
+        "<U0053><U0065><U0070><U0074><U0065><U006D><U0062><U0065><U0072>";/
+        "<U004F><U0063><U0074><U006F><U0062><U0065><U0072>";/
+        "<U004E><U006F><U0076><U0065><U006D><U0062><U0065><U0072>";/
+        "<U0044><U0065><U0063><U0065><U006D><U0062><U0065><U0072>"
+% from nl_NL
+d_t_fmt     "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062><U0020>/
+<U0025><U0059><U0020><U0025><U0054><U0020><U0025><U005A>"
+t_fmt       "<U0025><U0054>"
+am_pm       "";""
+t_fmt_ampm  ""
+date_fmt    "<U0025><U0061><U0020><U0025><U0065><U0020><U0025><U0062><U0020>/
+<U0025><U0059><U0020><U0025><U006B><U003A><U0025><U004D><U003A><U0025><U0053>/
+<U0020><U0025><U005A>"
+week        7;19971130;4
+first_weekday   2
+% custom
+d_fmt       "<U0025><U0059><U002D><U0025><U006D><U002D><U0025><U0064>"
 END LC_TIME
 
 LC_MESSAGES
@@ -118,12 +127,22 @@ copy "nl_NL"
 END LC_NAME
 
 LC_ADDRESS
-copy "nl_NL"
-country_isbn  0
-lang_name     "<U0045><U006E><U0067><U006C><U0069><U0073><U0068>"
-lang_ab       "<U0065><U006E>"
-lang_term     "<U0065><U006E><U0067>"
-lang_lib      "<U0065><U006E><U0067>"
+% from nl_NL
+postal_fmt  "<U0025><U0066><U0025><U004E><U0025><U0061><U0025><U004E><U0025>/
+<U0064><U0025><U004E><U0025><U0062><U0025><U004E><U0025><U0073><U0020><U0025>/
+<U0068><U0020><U0025><U0065><U0020><U0025><U0072><U0025><U004E><U0025><U007A>/
+<U0020><U0025><U0054><U0025><U004E><U0025><U0063><U0025><U004E>"
+country_ab2 "<U004E><U004C>"
+country_ab3 "<U004E><U004C><U0044>"
+country_num 528
+country_car "<U004E><U004C>"
+% from en_US
+lang_name   "<U0045><U006E><U0067><U006C><U0069><U0073><U0068>"
+lang_ab     "<U0065><U006E>"
+lang_term   "<U0065><U006E><U0067>"
+lang_lib    "<U0065><U006E><U0067>"
+% custom
+country_name  "<U004E><U0065><U0064><U0065><U0072><U006C><U0061><U006E><U0064>"
 END LC_ADDRESS
 
 LC_TELEPHONE
