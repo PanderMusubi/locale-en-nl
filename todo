@@ -1,0 +1,7 @@
+update-locale
+
+locale-gen
+
+locale-check
+
+validlocale

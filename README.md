@@ -76,4 +76,3 @@ The following minor improvemens for others locales that still need to be done ar
 * replace `int_select` in nl\_NL locale from `""` to `"+"`
 * replace `tel_dom_fmt` in nl\_NL locale from `""` to `"0%a-%l"`
 * replace in bs\_BA `tel_int-fmt` with `tel_int_fmt`
-
