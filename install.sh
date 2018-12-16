@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 if [ "$EUID" -ne 0 ]
     then echo "ERROR: Please run this script as root"
