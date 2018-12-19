@@ -54,10 +54,8 @@ These files have been generated with the `./validate.sh` script after
 installation.
 
 
-Sources
--------
+## Documentation
 
-* [Glibc bug 14085](https://sourceware.org/bugzilla/show_bug.cgi?id=14085)
 * [Glibc locales](http://sourceware.org/git/?p=glibc.git;a=tree;f=localedata/locales;hb=HEAD)
 * [Glibc locale en_US](https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=localedata/locales/nl_NL;hb=HEAD)
 * [Glibc locale nl_NL](https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=localedata/locales/en_US;hb=HEAD)
@@ -67,12 +65,21 @@ Sources
 * [Documentation strftime for Linux](http://man7.org/linux/man-pages/man3/strftime.3.html)
 
 
+## See also
+
+* [Glibc bug 14085](https://sourceware.org/bugzilla/show_bug.cgi?id=14085)
+* [Glibc bug 17823](https://sourceware.org/bugzilla/show_bug.cgi?id=17823)
+* [Glibc bug 19198](https://sourceware.org/bugzilla/show_bug.cgi?id=19198)
+* [Glibc bug 22043](https://sourceware.org/bugzilla/show_bug.cgi?id=22043)
+* [Glibc bug 23831](https://sourceware.org/bugzilla/show_bug.cgi?id=23831)
+* [Glibc bug 23996](https://sourceware.org/bugzilla/show_bug.cgi?id=23996)
+
+
 To do for other locales
 -----------------------
 
 The following minor improvemens for others locales that still need to be done are:
 * add after the line with `name_fmt` the line `name_gen    ""` to all en\_US and nl\_NL locales
-* add `mr    "dhr."`, `mrs    "mevr."`, `miss    "mevr."`, `ms    "mevr."` to nl\_NL locale
 * replace `int_select` in nl\_NL locale from `""` to `"+"`
 * replace `tel_dom_fmt` in nl\_NL locale from `""` to `"0%a-%l"`
 * replace in bs\_BA `tel_int-fmt` with `tel_int_fmt`

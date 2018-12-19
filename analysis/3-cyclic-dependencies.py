@@ -4,7 +4,7 @@ from logging import error, warning, info, INFO, basicConfig
 from os import listdir
 
 dependencies = {}
-base = '/usr/share/i18n/locales/'
+base = 'glibc/localedata/locales/'
 #basicConfig(level=INFO)
 
 for filename in sorted(listdir(base)):
@@ -29,5 +29,5 @@ for filename in sorted(listdir(base)):
 for destination, sources in sorted(dependencies.items()):
     for source in sources:
         if source in dependencies and destination in dependencies[source]:
-            warning('Cyclic dependencies found between locales {} and {}'
+            warning('Cyclic dependencies via copy found between locales {} and {}'
                     .format(destination, source))
