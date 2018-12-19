@@ -26,8 +26,10 @@ for filename in sorted(listdir(base)):
                     dependencies[filename] = set()
                 dependencies[filename].add(dependency)
 
+reported = [] # prevent reporting reverse direction
 for destination, sources in sorted(dependencies.items()):
     for source in sources:
-        if source in dependencies and destination in dependencies[source]:
+        if source in dependencies and destination in dependencies[source] and (source, destination) not in reported:
             warning('Cyclic dependencies via copy found between locales {} and {}'
                     .format(destination, source))
+            reported.append((destination, source))
