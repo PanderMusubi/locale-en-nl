@@ -54,6 +54,26 @@ These files have been generated with the `./validate.sh` script after
 installation.
 
 
+## Commands
+
+List the locales contained in the locale archive file.
+
+    localedef --list-archive
+
+Show current settings of the system locale and keyboard mapping.
+
+    localectl status
+
+List available locales useful for configuration with set-locale.
+
+    localectl list-locales
+
+
+    more /etc/default/locale
+    more /etc/locale.gen
+    more /etc/locale.alias
+
+
 ## Documentation
 
 * [Glibc locales](http://sourceware.org/git/?p=glibc.git;a=tree;f=localedata/locales;hb=HEAD)
@@ -64,22 +84,37 @@ installation.
 * [Documentation strftime for Linux](http://www.cplusplus.com/reference/ctime/strftime/)
 * [Documentation strftime for Linux](http://man7.org/linux/man-pages/man3/strftime.3.html)
 
+* man pages:
+    * [`locale(1)`](http://man7.org/linux/man-pages/man1/locale.1.html)
+    * [`locale(5)`](http://man7.org/linux/man-pages/man5/locale.5.html)
+    * [`locale(7)`](http://man7.org/linux/man-pages/man7/locale.7.html)
+    * [`localedef(1)`](http://man7.org/linux/man-pages/man1/localedef.1.html)
+    * [`lovalectl(1)`](http://man7.org/linux/man-pages/man1/localectl.1.html)
+    * [`locale.conf(5)`](http://man7.org/linux/man-pages/man5/locale.conf.5.html)
+
 
 ## See also
 
-* [Glibc bug 14085](https://sourceware.org/bugzilla/show_bug.cgi?id=14085)
-* [Glibc bug 17823](https://sourceware.org/bugzilla/show_bug.cgi?id=17823)
-* [Glibc bug 19198](https://sourceware.org/bugzilla/show_bug.cgi?id=19198)
-* [Glibc bug 22043](https://sourceware.org/bugzilla/show_bug.cgi?id=22043)
-* [Glibc bug 23831](https://sourceware.org/bugzilla/show_bug.cgi?id=23831)
-* [Glibc bug 23996](https://sourceware.org/bugzilla/show_bug.cgi?id=23996)
+* Presentation [NLUUG](https://nluug.nl) fall 2016 [English locale for the Netherlands (en_NL)
+](http://bit.ly/2gd1ZBu)
+
+* [Glibc bug 14085 - en_NL: new locale (English language for the Netherlands)](https://sourceware.org/bugzilla/show_bug.cgi?id=14085)
+* [Glibc bug 17823 - gdb CLI cannot recognize floating point numbers if LC_NUMERIC environment variable is set to nl_NL.UTF-8](https://sourceware.org/bugzilla/show_bug.cgi?id=17823)
+* [Glibc bug 19198 - nl_NL: small improvements for Dutch locales](https://sourceware.org/bugzilla/show_bug.cgi?id=19198)
+* [Glibc bug 22043 - *_NL: add country_isbn](https://sourceware.org/bugzilla/show_bug.cgi?id=22043)
+* [Glibc bug 22535 - en_DE: New locale](https://www.sourceware.org/bugzilla/show_bug.cgi?id=22535)
+* [Glibc bug 23831 - nl_NL missing LC_NUMERIC thousands_sep](https://sourceware.org/bugzilla/show_bug.cgi?id=23831)
+* [Glibc bug 23857 - Esperanto has no country ](https://www.sourceware.org/bugzilla/show_bug.cgi?id=23857)
+* [Glibc bug 23996 - Dutch salutations](https://sourceware.org/bugzilla/show_bug.cgi?id=23996)
+* [all open bugs](https://www.sourceware.org/bugzilla/buglist.cgi?bug_status=%5f%5fopen%5f%5f&component=localedata&product=glibc)
+* https://lh.2xlibre.net/locale/nds_NL/
+* https://lh.2xlibre.net/locale/li_NL/
+* https://lh.2xlibre.net/locale/fy_NL/
+* https://lh.2xlibre.net/locale/nl_NL/
 
 
 To do for other locales
 -----------------------
 
 The following minor improvemens for others locales that still need to be done are:
-* add after the line with `name_fmt` the line `name_gen    ""` to all en\_US and nl\_NL locales
-* replace `int_select` in nl\_NL locale from `""` to `"+"`
 * replace `tel_dom_fmt` in nl\_NL locale from `""` to `"0%a-%l"`
-* replace in bs\_BA `tel_int-fmt` with `tel_int_fmt`

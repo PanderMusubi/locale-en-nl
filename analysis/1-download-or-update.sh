@@ -1,5 +1,6 @@
 if [ -e glibc ]; then
 	cd glibc
+	git reset --hard HEAD
 	git pull -r
 	cd ..
 else
