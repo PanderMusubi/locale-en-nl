@@ -15,10 +15,10 @@ title       "English locale for the Netherlands"
 source      "https://github.com/PanderMusubi/locale-en-nl"
 contact     "Pander"
 email       "pander@users.sourceforge.net"
-language    "English"
+language    "American English"
 territory   "Netherlands"
-revision    "2.1"
-date        "2016-11-20"
+revision    "3.0"
+date        "2020-05-27"
 
 category    "i18n:2012";LC_IDENTIFICATION
 category    "i18n:2012";LC_CTYPE
@@ -35,23 +35,25 @@ category    "i18n:2012";LC_TELEPHONE
 END LC_IDENTIFICATION
 
 LC_CTYPE
-copy "en_US"
+% From en_US
+copy "i18n"
 END LC_CTYPE
 
 LC_COLLATE
-copy "en_US"
+% From en_US
+copy "iso14651_t1"
 END LC_COLLATE
 
 LC_MONETARY
-% from nl_NL
-int_curr_symbol     "<U0045><U0055><U0052><U0020>"
+% From nl_NL
+int_curr_symbol     "EUR "
 currency_symbol     "<U20AC>"
-% from en_US
-mon_decimal_point   "<U002E>"
-mon_thousands_sep   "<U002C>"
+% From en_US
+mon_decimal_point   "."
+mon_thousands_sep   ","
 mon_grouping        3;3
 positive_sign       ""
-negative_sign       "<U002D>"
+negative_sign       "-"
 int_frac_digits     2
 frac_digits         2
 p_cs_precedes       1
@@ -65,90 +67,86 @@ n_sign_posn         1
 END LC_MONETARY
 
 LC_NUMERIC
-copy "en_US"
+% From en_US
+decimal_point       "."
+thousands_sep       ","
+grouping            3;3
 END LC_NUMERIC
 
 LC_TIME
-% from en_US
-abday   "<U0053><U0075><U006E>";"<U004D><U006F><U006E>";/
-        "<U0054><U0075><U0065>";"<U0057><U0065><U0064>";/
-        "<U0054><U0068><U0075>";"<U0046><U0072><U0069>";/
-        "<U0053><U0061><U0074>"
-day     "<U0053><U0075><U006E><U0064><U0061><U0079>";/
-        "<U004D><U006F><U006E><U0064><U0061><U0079>";/
-        "<U0054><U0075><U0065><U0073><U0064><U0061><U0079>";/
-        "<U0057><U0065><U0064><U006E><U0065><U0073><U0064><U0061><U0079>";/
-        "<U0054><U0068><U0075><U0072><U0073><U0064><U0061><U0079>";/
-        "<U0046><U0072><U0069><U0064><U0061><U0079>";/
-        "<U0053><U0061><U0074><U0075><U0072><U0064><U0061><U0079>"
-abmon   "<U004A><U0061><U006E>";"<U0046><U0065><U0062>";/
-        "<U004D><U0061><U0072>";"<U0041><U0070><U0072>";/
-        "<U004D><U0061><U0079>";"<U004A><U0075><U006E>";/
-        "<U004A><U0075><U006C>";"<U0041><U0075><U0067>";/
-        "<U0053><U0065><U0070>";"<U004F><U0063><U0074>";/
-        "<U004E><U006F><U0076>";"<U0044><U0065><U0063>"
-mon     "<U004A><U0061><U006E><U0075><U0061><U0072><U0079>";/
-        "<U0046><U0065><U0062><U0072><U0075><U0061><U0072><U0079>";/
-        "<U004D><U0061><U0072><U0063><U0068>";/
-        "<U0041><U0070><U0072><U0069><U006C>";/
-        "<U004D><U0061><U0079>";/
-        "<U004A><U0075><U006E><U0065>";/
-        "<U004A><U0075><U006C><U0079>";/
-        "<U0041><U0075><U0067><U0075><U0073><U0074>";/
-        "<U0053><U0065><U0070><U0074><U0065><U006D><U0062><U0065><U0072>";/
-        "<U004F><U0063><U0074><U006F><U0062><U0065><U0072>";/
-        "<U004E><U006F><U0076><U0065><U006D><U0062><U0065><U0072>";/
-        "<U0044><U0065><U0063><U0065><U006D><U0062><U0065><U0072>"
-% from nl_NL
-d_t_fmt     "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062><U0020>/
-<U0025><U0059><U0020><U0025><U0054><U0020><U0025><U005A>"
-t_fmt       "<U0025><U0054>"
-am_pm       "";""
-t_fmt_ampm  ""
-date_fmt    "<U0025><U0061><U0020><U0025><U0065><U0020><U0025><U0062><U0020>/
-<U0025><U0059><U0020><U0025><U006B><U003A><U0025><U004D><U003A><U0025><U0053>/
-<U0020><U0025><U005A>"
-week        7;19971130;4
-first_weekday   2
-% custom
-d_fmt       "<U0025><U0059><U002D><U0025><U006D><U002D><U0025><U0064>"
+% From en_US
+abday               "Sun";"Mon";"Tue";"Wed";"Thu";"Fri";"Sat"
+day                 "Sunday";"Monday";"Tuesday";"Wednesday";/
+                    "Thursday";"Friday";"Saturday"
+abmon               "Jan";"Feb";"Mar";/
+                    "Apr";"May";"Jun";/
+                    "Jul";"Aug";"Sep";/
+                    "Oct";"Nov";"Dec"
+mon                 "January";"February";"March";/
+                    "April";"May";"June";/
+                    "July";"August";"September";/
+                    "October";"November";"December"
+% From nl_NL
+d_t_fmt             "%a %d %b %Y %T %Z"
+t_fmt               "%T"
+am_pm               "";""
+t_fmt_ampm          ""
+week                7;19971130;4
+first_weekday       2
+% Custom en_NL
+d_fmt               "%Y-%m-%d"
 END LC_TIME
 
 LC_MESSAGES
-copy "en_US"
+% From en_US
+yesexpr             "^[+1yY]"
+noexpr              "^[-0nN]"
+yesstr              "yes"
+nostr               "no"
 END LC_MESSAGES
 
 LC_PAPER
+% From nl_NL
 copy "nl_NL"
 END LC_PAPER
 
 LC_NAME
-copy "nl_NL"
+% From en_US
+name_fmt            "%d%t%g%t%m%t%f"
+name_miss           "Miss."
+name_mr             "Mr."
+name_mrs            "Mrs."
+name_ms             "Ms."
+% Custom en_NL
+name_gen            "Mr./Mrs."
 END LC_NAME
 
 LC_ADDRESS
-% from nl_NL
-postal_fmt  "<U0025><U0066><U0025><U004E><U0025><U0061><U0025><U004E><U0025>/
-<U0064><U0025><U004E><U0025><U0062><U0025><U004E><U0025><U0073><U0020><U0025>/
-<U0068><U0020><U0025><U0065><U0020><U0025><U0072><U0025><U004E><U0025><U007A>/
-<U0020><U0025><U0054><U0025><U004E><U0025><U0063><U0025><U004E>"
-country_ab2 "<U004E><U004C>"
-country_ab3 "<U004E><U004C><U0044>"
-country_num 528
-country_car "<U004E><U004C>"
-% from en_US
-lang_name   "<U0045><U006E><U0067><U006C><U0069><U0073><U0068>"
-lang_ab     "<U0065><U006E>"
-lang_term   "<U0065><U006E><U0067>"
-lang_lib    "<U0065><U006E><U0067>"
-% custom
-country_name  "<U004E><U0065><U0064><U0065><U0072><U006C><U0061><U006E><U0064>"
+% From en_US
+lang_name           "English"
+lang_ab             "en"
+lang_term           "eng"
+lang_lib            "eng"
+% From nl_NL
+postal_fmt          "%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
+country_ab2         "NL"
+country_ab3         "NLD"
+country_num         528
+country_car         "NL"
+% Custom en_NL
+country_name        "Netherlands"
 END LC_ADDRESS
 
 LC_TELEPHONE
-copy "nl_NL"
+% From nl_NL
+tel_int_fmt         "+%c %a %l"
+int_prefix          "31"
+int_select          "00"
+% Custom en_NL (missing in nl_NL)
+tel_dom_fmt         "(%A) %l"
 END LC_TELEPHONE
 
 LC_MEASUREMENT
+% From nl_NL
 copy "nl_NL"
 END LC_MEASUREMENT

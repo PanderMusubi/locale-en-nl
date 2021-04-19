@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 
-from logging import error, warning, info, INFO, basicConfig
+from logging import error, warning, basicConfig
 from os import listdir
 
 dependencies = {}
 base = 'glibc/localedata/locales/'
-#basicConfig(level=INFO)
 
 for filename in sorted(listdir(base)):
     path = base + filename
-    info('Processing locale file {}...'.format(path))
     with open(path) as locale:
         for line in locale:
             line = line[:-1]
@@ -33,3 +31,20 @@ for destination, sources in sorted(dependencies.items()):
             warning('Cyclic dependencies via copy found between locales {} and {}'
                     .format(destination, source))
             reported.append((destination, source))
+
+omit =('i18n', 'iso14651_t1', 'iso14651_t1_common', 'iso14651_t1_pinyin')
+with open('graph.gv', 'w') as graph:
+    graph.write('''digraph G {
+ratio="auto"
+''')
+    for destination, sources in sorted(dependencies.items()):
+        for source in sources:
+            if source not in omit and destination not in omit:
+                if (destination, source) in reported:
+                    graph.write(f'"{source}" -> "{destination}" [color="red"]\n')
+                else:
+                    graph.write(f'"{source}" -> "{destination}"\n')
+    graph.write('''}''')
+
+print('Now, run: twopi -Tpdf graph.gv -ograph.pdf')
+print('Now, run: twopi -Tpng graph.gv -ograph.png')
