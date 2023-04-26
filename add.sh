@@ -2,6 +2,11 @@
 
 # This will add the locale en_NL.
 
+if [ `id -u` -ne 0 ]; then
+    echo "ERROR: Please run this script as root"
+    exit 1
+fi
+
 # add locale
 cp -f en_NL /usr/share/i18n/locales/
 
