@@ -1,5 +1,5 @@
-escape_char /
 comment_char %
+escape_char /
 
 % This file is part of the GNU C Library and contains locale data.
 % The Free Software Foundation does not claim any copyright interest
@@ -17,8 +17,8 @@ contact     "Pander"
 email       "pander@users.sourceforge.net"
 language    "American English"
 territory   "Netherlands"
-revision    "3.0"
-date        "2020-05-27"
+revision    "3.1"
+date        "2023-04-26"
 
 category    "i18n:2012";LC_IDENTIFICATION
 category    "i18n:2012";LC_CTYPE
@@ -36,12 +36,12 @@ END LC_IDENTIFICATION
 
 LC_CTYPE
 % From en_US
-copy "i18n"
+copy "en_US"
 END LC_CTYPE
 
 LC_COLLATE
 % From en_US
-copy "iso14651_t1"
+copy "en_US"
 END LC_COLLATE
 
 LC_MONETARY
@@ -68,9 +68,7 @@ END LC_MONETARY
 
 LC_NUMERIC
 % From en_US
-decimal_point       "."
-thousands_sep       ","
-grouping            3;3
+copy "en_US"
 END LC_NUMERIC
 
 LC_TIME
@@ -99,10 +97,7 @@ END LC_TIME
 
 LC_MESSAGES
 % From en_US
-yesexpr             "^[+1yY]"
-noexpr              "^[-0nN]"
-yesstr              "yes"
-nostr               "no"
+copy "en_US"
 END LC_MESSAGES
 
 LC_PAPER
