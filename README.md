@@ -39,7 +39,7 @@ https://sourceware.org/bugzilla/show_bug.cgi?id=14085
 Installation
 ------------
 
-Install the locale en\_NL with `./install.sh` or running the command from that
+Install the locale en\_NL with `./add.sh` or running the command from that
 script manually.
 
 
