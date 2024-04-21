@@ -1,5 +1,5 @@
-comment_char %
 escape_char /
+comment_char %
 
 % This file is part of the GNU C Library and contains locale data.
 % The Free Software Foundation does not claim any copyright interest
@@ -17,8 +17,8 @@ contact     "Pander"
 email       "pander@users.sourceforge.net"
 language    "American English"
 territory   "Netherlands"
-revision    "3.1"
-date        "2023-04-26"
+revision    "3.2"
+date        "2022-04-22"
 
 category    "i18n:2012";LC_IDENTIFICATION
 category    "i18n:2012";LC_CTYPE

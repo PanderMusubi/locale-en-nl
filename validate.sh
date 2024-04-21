@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 if [ ! -e zaf-code ]
 then
@@ -17,7 +17,7 @@ then
     zaf-code/locale/check-dates en_NL >> en_NL.txt
     zaf-code/locale/check-numbers en_NL >> en_NL.txt
 else
-    echo "Please, install en_NL to /usr/share/i18n/locales with install.sh"
+    echo "Please, install en_NL to /usr/share/i18n/locales with add.sh"
 fi
 
 zaf-code/locale/definition en_US.utf8 > en_US.txt
@@ -27,3 +27,4 @@ zaf-code/locale/check-numbers en_US >> en_US.txt
 zaf-code/locale/definition nl_NL.utf8 > nl_NL.txt
 zaf-code/locale/check-dates nl_NL >> nl_NL.txt
 zaf-code/locale/check-numbers nl_NL >> nl_NL.txt
+
