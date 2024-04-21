@@ -39,8 +39,17 @@ https://sourceware.org/bugzilla/show_bug.cgi?id=14085
 Installation
 ------------
 
-Install the locale en\_NL with `./add.sh` or running the command from that
+Install the locale en\_NL with `./add.sh` or running the commands from that
 script manually.
+
+### Note: LC_CTYPE needs further intervention
+
+The LC\_CTYPE provided by this locale is identical to that provided by en_US.UTF-8.
+Nevertheless, further intervention is required to get everything to work smoothly
+([source](https://xyne.dev/projects/locale-en_xx/#usage)).
+There are two approaches:
+either explicitly set `LC_CTYPE=en_US.UTF-8` in `/etc/locale.conf`,
+or modify the Xlib database (which is what `add.sh` does, if this database exists).
 
 
 Validation
