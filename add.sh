@@ -23,6 +23,7 @@ if [ -f /etc/locale.gen ]; then
 
     # regenerate locales
     locale-gen
+fi
 
 # update Xlib database (see https://xyne.dev/projects/locale-en_xx/#usage)
 file=/usr/share/X11/locale/locale.dir
