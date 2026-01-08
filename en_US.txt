@@ -2,7 +2,7 @@
 export LC_ALL=en_US.utf8
 en_US.utf8: title="English locale for the USA"
 source="Free Software Foundation, Inc."
-address="http://www.gnu.org/software/libc/"
+address="https://www.gnu.org/software/libc/"
 contact=""
 email="bug-glibc-locales@gnu.org"
 tel=""
@@ -16,6 +16,7 @@ revision="1.0"
 date="2000-06-24"
 category="i18n:2012;UTF-8;;;;;;;;;;;"
 identification-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_IDENTIFICATION -----
 ---- START LC_CTYPE -----
 export LC_ALL=en_US.utf8
@@ -58,19 +59,21 @@ ctype-outdigit6_wc=54
 ctype-outdigit7_wc=55
 ctype-outdigit8_wc=56
 ctype-outdigit9_wc=57
-ctype-translit-tab-size=5728
+ctype-translit-tab-size=6492
 ctype-translit-default-missing-len=1
 ctype-translit-ignore-len=0
 ctype-translit-ignore=""
 map-to-nonascii=0
 nonascii-case=0
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_CTYPE -----
 ---- START LC_COLLATE -----
 export LC_ALL=en_US.utf8
 en_US.utf8: collate-nrules=4
-collate-rulesets=""
-collate-symb-hash-sizemb=2707
+collate-rulesets=""
+collate-symb-hash-sizemb=1303
 collate-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_COLLATE -----
 ---- START LC_MONETARY -----
 export LC_ALL=en_US.utf8
@@ -78,7 +81,7 @@ en_US.utf8: int_curr_symbol="USD "
 currency_symbol="$"
 mon_decimal_point="."
 mon_thousands_sep=","
-mon_grouping=3;3
+mon_grouping=3
 positive_sign=""
 negative_sign="-"
 int_frac_digits=2
@@ -120,15 +123,17 @@ conversion_rate=1;1
 monetary-decimal-point-wc=46
 monetary-thousands-sep-wc=44
 monetary-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_MONETARY -----
 ---- START LC_NUMERIC -----
 export LC_ALL=en_US.utf8
 en_US.utf8: decimal_point="."
 thousands_sep=","
-grouping=3;3
+grouping=3
 numeric-decimal-point-wc=46
 numeric-thousands-sep-wc=44
 numeric-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_NUMERIC -----
 ---- START LC_TIME -----
 export LC_ALL=en_US.utf8
@@ -156,8 +161,11 @@ first_weekday=1
 first_workday=2
 cal_direction=1
 timezone=""
-date_fmt="%a %b %e %H:%M:%S %Z %Y"
+date_fmt="%a %b %e %r %Z %Y"
 time-codeset="UTF-8"
+alt_mon="January;February;March;April;May;June;July;August;September;October;November;December"
+ab_alt_mon="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_TIME -----
 ---- START LC_MESSAGES -----
 export LC_ALL=en_US.utf8
@@ -166,12 +174,14 @@ noexpr="^[-0nN]"
 yesstr="yes"
 nostr="no"
 messages-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_MESSAGES -----
 ---- START LC_PAPER -----
 export LC_ALL=en_US.utf8
 en_US.utf8: height=279
 width=216
 paper-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_PAPER -----
 ---- START LC_TELEPHONE -----
 export LC_ALL=en_US.utf8
@@ -180,11 +190,13 @@ tel_dom_fmt="(%a) %l"
 int_select="11"
 int_prefix="1"
 telephone-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_TELEPHONE -----
 ---- START LC_MEASUREMENT -----
 export LC_ALL=en_US.utf8
 en_US.utf8: measurement=2
 measurement-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_MEASUREMENT -----
 ---- START LC_NAME -----
 export LC_ALL=en_US.utf8
@@ -195,6 +207,7 @@ name_mrs="Mrs."
 name_miss="Miss."
 name_ms="Ms."
 name-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_NAME -----
 ---- START LC_ADDRESS -----
 export LC_ALL=en_US.utf8
@@ -211,21 +224,22 @@ lang_ab="en"
 lang_term="eng"
 lang_lib="eng"
 address-codeset="UTF-8"
+export LC_ALL=en_US.utf8.utf8
 ----- END LC_ADDRESS -----
 Using locale: LC_TIME="en_US.utf8"
 
 Locale definitions at time 'now'
-d_t_fmt (%c): Tue 25 Oct 2016 03:01:43 PM CEST
-d_fmt (%x): 10/25/2016
-t_fmt (%X): 03:01:43 PM
-AM_PM (%p): PM
-am_pm (%P): pm
-t_fmt_ampm (%r): 03:01:43 PM
-date_fmt: Tue Oct 25 15:01:43 CEST 2016
-abday (%a) Tue
-day (%A) Tuesday
-abmon (%b) Oct
-mon (%B) October
+d_t_fmt (%c): 2026 M01 8, Thu 11:21:03
+d_fmt (%x): 2026 M01 8
+t_fmt (%X): 11:21:03
+AM_PM (%p): AM
+am_pm (%P): am
+t_fmt_ampm (%r): 11:21:03 AM
+date_fmt: Thu Jan  8 11:21:03 CET 2026
+abday (%a) Thu
+day (%A) Thursday
+abmon (%b) Jan
+mon (%B) January
 
 Days of the week (long - abbreviated)
 Sunday - Sun

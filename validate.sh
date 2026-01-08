@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
-if [ ! -e zaf-code ]
-then
+if [ ! -d zaf-code ]; then
     svn checkout --depth empty svn://svn.code.sf.net/p/zaf/code/trunk zaf-code
     svn update --set-depth infinity zaf-code/locale
     sed -i 's/!\/bin\/sh/!\/bin\/bash/' zaf-code/locale/errors
@@ -11,8 +10,7 @@ then
 fi
 
 zaf-code/locale/errors en_NL
-if [ -e /usr/share/i18n/locales/en_NL ]
-then
+if [ -e /usr/share/i18n/locales/en_NL ]; then
     zaf-code/locale/definition en_NL.utf8 > en_NL.txt
     zaf-code/locale/check-dates en_NL >> en_NL.txt
     zaf-code/locale/check-numbers en_NL >> en_NL.txt
