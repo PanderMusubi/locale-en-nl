@@ -7,13 +7,25 @@ if [ `id -u` -ne 0 ]; then
     exit 1
 fi
 
-# add locale
+# check locale
 if [ -d /usr/share/i18n/locales/ ]; then
     cp -f en_NL /usr/share/i18n/locales/
 else
     echo "ERROR: No /usr/share/i18n/locales/ directory, install package locales or glibc-i18ndata"
     exit 1
 fi
+
+# update Xlib database (see https://xyne.dev/projects/locale-en_xx/#usage)
+for locale_file in \
+    /usr/share/X11/locale/locale.dir \
+    /usr/share/X11/locale/compose.dir
+do
+    if [[ -f $locale_file ]] && ! grep -q en_NL $locale_file; then
+        # Take the lines with en_NZ and put before it the same line but with en_NL
+        perl -i -p -e "s{^(.+?\s)en_NZ\.(.+)$}{\1en_NL.\2\n$&}" $locale_file
+        echo "en_NL added to $locale_file"
+    fi
+done
 
 # register locale
 if [ -f /etc/locale.gen ]; then
@@ -23,31 +35,13 @@ if [ -f /etc/locale.gen ]; then
 
     # regenerate locales
     locale-gen
+elif [ -x /usr/bin/localedef ]; then
+    # OpenSuse does not have locale-gen
+    /usr/bin/localedef -f UTF-8 -i en_NL en_NL.UTF-8
+else
+    echo "ERROR: Do not know how to register locale"
+    exit 1
 fi
-
-# update Xlib database (see https://xyne.dev/projects/locale-en_xx/#usage)
-file=/usr/share/X11/locale/locale.dir
-if [ -f $file ] && [ `grep en_NL $file|wc -l` -eq 0 ]; then
-    echo >> $file
-    echo "en_US.UTF-8/XLC_LOCALE en_NL.UTF-8" >> $file
-    echo "en_US.UTF-8/XLC_LOCALE: en_NL.UTF-8" >> $file
-fi
-file=/usr/share/X11/locale/compose.dir
-if [ -f $file ] && [ `grep en_NL $file|wc -l` -eq 0 ]; then
-    echo >> $file
-    echo "en_US.UTF-8/Compose en_NL.UTF-8" >> $file
-    echo "en_US.UTF-8/Compose: en_NL.UTF-8" >> $file
-fi
-
-# regenerate locales
-locale-gen
-#TODO where to use the following lines?
-#elif [ -x /usr/bin/localedef ]; then
-#    /usr/bin/localedef -f UTF-8 -i en_NL en_NL.UTF-8
-#else
-#    echo "ERROR: Do not know how to register locale"
-#    exit 1
-#fi
 
 # list locale
 locale -a|grep en_NL
